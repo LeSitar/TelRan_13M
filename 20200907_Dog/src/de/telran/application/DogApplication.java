@@ -7,14 +7,20 @@ public class DogApplication {
         Dog dog = new Dog();
         Dog dog1 = new Dog("Sharik", 3);
 
-        System.out.println(dog1.getName());
+        /*System.out.println(dog1.getName());
         dog.setName("Bobik");
         System.out.println(dog.getName());
         dog.setName("Tuzik");
         System.out.println(dog.getName());
         System.out.println(dog);
         dog.dogVoice();
-        Dog.someMethod();
+        Dog.someMethod();*/
+
+        System.out.println(dog1.isDogStatus());
+        //dog1.dogSleep();
+        dog.dogSleep1();
+        dog1.dogSleep();
+        dog1.display();
 
 
 

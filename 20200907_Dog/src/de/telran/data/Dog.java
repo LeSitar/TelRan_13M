@@ -9,6 +9,9 @@ public class Dog {
     private String nameOwner;
     private boolean dogStatus;
 
+
+
+
     public Dog(){}
 
     public Dog(String name, int age){
@@ -22,6 +25,19 @@ public class Dog {
         this.breed = breed;
         this.weight = weight;
         this.nameOwner = nameOwner;
+    }
+
+    public void dogSleep(){
+        this.dogStatus = true;
+        dogSleep1();
+    }
+
+    public void dogRun(){
+        this.dogStatus = false;
+    }
+
+    public void dogSleep1(){
+        System.out.println("i'm sleeping");
     }
 
     public String getName() {
@@ -66,6 +82,21 @@ public class Dog {
 
     public void setDogStatus(boolean dogStatus) {
         this.dogStatus = dogStatus;
+    }
+
+    // a>b ? true:false
+
+
+    public void display(){
+        System.out.println("Nickname: " + name);
+        System.out.println("Breed: " + breed);
+        System.out.println("Age " + age);
+        System.out.print(name + ": " + (dogStatus ? "hr-hr-hr":"gav-gav-gav"));
+        /*if(dogStatus)
+            System.out.println("hr-hr-hr");
+        else{
+            System.out.println("gav-gav-gav");
+        }*/
     }
 
     @Override
