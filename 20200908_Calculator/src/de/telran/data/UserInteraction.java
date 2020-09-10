@@ -8,6 +8,11 @@ public class UserInteraction {
 
    public static double getParameter(){
        System.out.println("Enter number, please");
+       while (!scanner.hasNextDouble()){
+           System.out.println("it's not number, enter number");
+           scanner.next();
+           scanner.hasNextDouble();
+       }
         return scanner.nextDouble();
     }
 
