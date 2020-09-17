@@ -20,8 +20,10 @@ public class CinemaApp {
         Cinema cinema4 = new Cinema ("Cinemax", new Address("Alexanderplatz", 1));
 
         cinema1.setAddress(new Address("Wasserturmstrasse", 5));
-        //cinema1.getAddress().setStreet("Wasserturmstrasse");
-        //cinema1.getAddress().setHouseNumber(5);
+        System.out.println(cinema1.getAddress());
+        cinema1.getAddress().setStreet("Wasserturms");
+        cinema1.getAddress().setHouseNumber(7);
+        System.out.println(cinema1.getAddress());
 
         Cinema[] cinemas = {cinema1,cinema2,cinema3,cinema4};
         Cinema[] cinemas1 = {cinema3,cinema4};
