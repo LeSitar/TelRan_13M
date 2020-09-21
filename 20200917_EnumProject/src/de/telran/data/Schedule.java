@@ -2,26 +2,30 @@ package de.telran.data;
 
 public class Schedule {
 
-    private DayOfWeek dayOfWeek;
-    //private DayOfWeek[] week;
+    //private DayOfWeek dayOfWeek;
+    private DayOfWeek[] week;
 
-    public Schedule(DayOfWeek dayOfWeek) {
-        this.dayOfWeek = dayOfWeek;
-       // this.week = DayOfWeek.values();
+    public Schedule() {
+        //this.dayOfWeek = dayOfWeek;
+        this.week = DayOfWeek.values();
     }
 
-    public DayOfWeek getDayOfWeek() {
+    /*public DayOfWeek getDayOfWeek() {
         return dayOfWeek;
     }
 
     public void setDayOfWeek(DayOfWeek dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
+    }*/
+
+
+    public DayOfWeek[] getWeek() {
+        return week;
     }
 
 
-
-    public void wakeUp(){
-        if(getDayOfWeek()==DayOfWeek.SATURDAY || dayOfWeek == DayOfWeek.SUNDAY){  // if(dayOfWeek.ordinal()>4)
+    public void wakeUp(DayOfWeek dayOfWeek){
+        if(dayOfWeek.ordinal()>4){  // if(dayOfWeek.ordinal()>4)
             System.out.println("you can sleep longer");
         }
         else{
@@ -29,7 +33,7 @@ public class Schedule {
         }
     }
 
-    public void getMenu(){
+    public void getMenu(DayOfWeek dayOfWeek){
         switch (dayOfWeek){
             case MONDAY:
                 System.out.println("Spaghetti");
@@ -54,4 +58,12 @@ public class Schedule {
                 break;
         }
     }
+
+    public void displayWeekMenu(){
+        for (DayOfWeek day:week) {
+            getMenu(day);
+        }
+    }
+
+
 }

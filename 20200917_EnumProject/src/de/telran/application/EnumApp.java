@@ -21,14 +21,11 @@ public class EnumApp {
         System.out.println(DayOfWeek.FRIDAY.getTitle());
         DayOfWeek.FRIDAY.sayHello();
 
-        Schedule schedule = new Schedule(DayOfWeek.MONDAY);
-        schedule.wakeUp();
-        schedule.getMenu();
-
-        Schedule[] schedules = {new Schedule(DayOfWeek.MONDAY), new Schedule(DayOfWeek.TUESDAY), new Schedule(DayOfWeek.WEDNESDAY)};
-        for (Schedule s:schedules) {
-            s.getMenu();
-        }
+        Schedule schedule = new Schedule();
+        schedule.wakeUp(DayOfWeek.FRIDAY);
+        schedule.getMenu(DayOfWeek.MONDAY);
+        System.out.println();
+        schedule.displayWeekMenu();
 
 
 
