@@ -1,18 +1,18 @@
 package de.telran;
 
 public class LazySingleton {
-    private static LazySingleton instance;
+    private static LazySingleton lazySingleton;
     private String name;
 
     private LazySingleton() {
     }
 
     public static LazySingleton getInstance(String name){
-        if(instance==null) {
-            instance = new LazySingleton();
-            instance.name = name;
+        if(lazySingleton ==null) {
+            lazySingleton = new LazySingleton();
+            lazySingleton.name = name;
         }
-        return instance;
+        return lazySingleton;
     }
 
     public String getName() {

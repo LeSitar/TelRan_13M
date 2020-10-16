@@ -13,6 +13,8 @@ public class Main {
 
         System.out.println(lz1==lz2);
 
+        SingletonWithHolder boss = SingletonWithHolder.getInstance();
+        System.out.println(SingletonWithHolder.getName());
 
     }
 }
