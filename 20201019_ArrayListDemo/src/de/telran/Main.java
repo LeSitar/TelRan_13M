@@ -2,6 +2,7 @@ package de.telran;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -16,7 +17,9 @@ public class Main {
 
         CustomArrayList<String> strings = new CustomArrayList<>();
 
-        List list = new ArrayList();
+
+
+        List<String> list = new ArrayList<>();
 
     }
 }
